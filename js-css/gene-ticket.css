@@ -1,0 +1,433 @@
+/* Global rules  */
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+body{
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #611725;
+    /* overflow: hidden; */
+}
+
+header {
+    padding-left: 5%;
+    background-color: #932337;
+    align-items: center;
+    border-bottom: white solid 1.5px;
+}
+header span{
+    color: white;
+    float: right;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    margin-top: 15px;
+
+}
+header span:hover{
+    transform: scale(1.03);
+    cursor: pointer;    
+}
+header span:active{
+    transform: scale(.98);   
+}
+.content{
+    background-color: #611725;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* Style Ticket  */
+#ticket {
+    display : none ;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 30%;
+    border: solid 1px rgb(92, 77, 12);
+    border-radius: 20px;
+    margin-left: 35%;
+    margin-top: 2%;
+    padding: 10px 20px;
+}
+#ticket div{
+    margin: 3%;
+}
+#ticket table{
+    width: 85%;
+    margin-left: 7.5%;
+}
+#ticket table tr td:nth-child(2){
+    font-size: 14px;
+}
+.caiss span:last-child , 
+.numT span:last-child, 
+#nbProduits span:last-child, 
+#tva span:last-child, 
+#gTotal span:last-child , 
+#temps span:last-child{
+    margin-left: 20%;
+}
+#divs {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+#divs button{
+    margin-left: 5px;
+    margin-top: 0.5%;
+    border: solid 1.2px #843619;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+#divs button:hover{
+    background-color: black;
+    color: white;
+}
+
+
+/* Style la partie gauche de la page : produits selectionnées et caissier */
+.choix {
+    width: 25%;
+    height:100%;
+    background-color: #611725;
+}
+.choix .caissier {
+    color: white;
+    border: solid 1.5px #ffffff;
+    background-color: #6f1a2a;
+    border-radius: 7px;
+    width: 95%;
+    padding: 5px;
+    margin: 7px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.choix .caissier  img{
+    margin-right: 5%;
+}
+.choix .caissier  span{
+    font-size: 19px;
+    font-weight: 700;
+}
+.content .choix .prod-choisis{
+    overflow-y: scroll;
+    max-height: 63vh;
+    overflow-anchor: hidden;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}  
+/* Track */
+::-webkit-scrollbar-track {
+background: #581e29;
+border-radius: 10px;
+
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: #360d14;
+border-radius: 10px;
+
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #21070c;
+
+}
+/* Track on hover */
+::-webkit-scrollbar-track:hover {
+    background: #47111b;
+
+}
+.choix .prod-choisis .prod{
+    color: white;
+    justify-content:space-around;
+    align-items: center;
+    display: flex;
+    border: solid 1px #ffffff;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 5px 2px;
+    background-color: #521220;
+    /* overflow-y:inherit; */
+}
+.choix .prod-choisis .prod .donnee{
+    width: 70%;
+}
+.choix .prod-choisis .prod .donnee .partie1{
+    display: flex;
+    justify-content: space-between;
+}
+.choix .prod-choisis .prod .donnee .partie2{
+    display: flex;
+    justify-content: space-between;
+}
+.choix .prod-choisis .prod .donnee .partie2 span{
+    font-size: 13px;
+    font-weight: 700;
+}
+.choix .prod-choisis img:hover{
+    transform: scale(1.03);
+    cursor: pointer;    
+}
+.choix .prod-choisis img:active{
+    transform: scale(.98);   
+}
+.bilan{
+    color: white;
+    position: fixed;
+    background-color: #43101a;
+    border: white;
+    /* border-radius: 7px; */
+    padding-top: 7px ;
+    border: white solid 1.5px;
+    width: inherit;
+    bottom: 45px;
+
+}
+.bilan .part1{
+    display: flex;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    
+}
+.bilan .part2{
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #843619;
+    padding-left: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    
+    display: flex;
+}
+
+
+/* Style de la partie de milieu : les produit  */
+.produits {
+    width: 60%;
+    background-color: #49111c;
+    min-height: 700px;
+    border-left: white solid 1px;
+}
+.produits .head {
+    color: white;
+    padding: 5px;
+    border: solid 1px #ffffff;
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #3d0e17;
+    border-radius: 10px;
+}
+.produits .head button{
+    border: none;
+    background-color: #49111c;
+}
+.produits .head  p{
+    font-size: 20px;
+    font-weight: 500;
+}
+.produits .head .rechercher{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid white 1px;
+    border-radius: 50px;
+    background-color: white;
+}
+.produits .head .rechercher input{
+    background-color: #ffffff;
+    padding: 7px;
+    border: none;
+    margin-left: 10px;
+
+}
+.produits .head .rechercher img{
+    height: 20px;
+    width: 20px;
+}
+.produits .head .rechercher button{
+    background-color: #ffffff;
+    padding: 2px;
+    margin-right: 6px;
+    border-radius: 50%;
+    cursor: pointer;
+    /* border-left:solid black 2px; */
+    
+}
+.produits .head .rechercher img:hover{
+    transform: scale(1.03);
+
+}
+.produits .head .rechercher img:active{
+    transform: scale(0.98);
+
+}
+.produits .pcat{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.produits .pcat .prod{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 20%;
+    border : solid 1px gray ;
+    border-radius: 8%;
+    padding: 1%;
+    height: fit-content;
+    margin-right: 1%;
+    margin-bottom: 1%;
+    background-color: #43101a;
+}
+
+.produits .pcat .prod:hover {
+    box-shadow: 2px 2px 2px 2px #641e2c;
+    transform: scale(1.03);
+    cursor: pointer;
+}
+.produits .pcat .prod:active {
+    box-shadow: 0px 4px 8px rgba(darken(dodgerblue, 30%));
+    transform: scale(.98);
+
+}
+.produits .pcat .prod p{
+    color: white;
+    font-weight: 700;
+}
+.produits .pcat .prod img{
+    border: solid 3px #843619;
+    border-radius: 50%;
+}
+
+
+/* Style de la partie à droite : les catégorie  */
+.categories {
+    width: 15%;
+    background-color: #611725;
+    border-left: rgb(255, 255, 255) solid 1px;
+}
+.categories p{
+    padding: 5px;
+    border: solid 0.5px #b4d6e5;
+    margin: 7px;
+    text-align: center;
+    color:white;
+    font-size: 19px;
+    font-weight: 600;
+    background-color: #6f1a2a;
+    border-radius: 7px;
+    margin-bottom: 40px;
+}
+.categories .cat .catn{
+    margin: 10px ;
+    color: white;
+    border: solid 1px #b4d6e5;
+    border-radius: 8%;
+    padding: 4px;
+    box-shadow: #748991;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.categories .cat .catn:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+}
+.categories .cat .catn:active {
+    transform: scale(.98);
+
+}
+#cat1{
+    background-color: #f20c0c;
+}
+.categories .cat .catn:hover{
+    cursor: pointer;
+}
+.categories .cat .catn img{
+    padding: 0;
+}
+.categories .cat .catn h4{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    height: 7%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #932337;
+    border-top: white solid 1.5px;
+}
+footer button{
+    color: white;
+    margin-top: 8.5px;
+    border: solid 1.2px #ffffff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #4f131f;
+    margin-left: 8px;
+
+}
+footer button:hover{
+    box-shadow: 0px 15px 25px -5px rgba(darken(dodgerblue, 40%));
+    transform: scale(1.03);
+
+}
+footer button:active{
+    box-shadow: 0px 4px 8px rgba(darken(dodgerblue, 30%));
+    transform: scale(.98);
+
+}
+footer button:hover{
+    color: white;
+    background-color: #b87730;
+}
+#generer{
+    margin-left: 800px;
+}

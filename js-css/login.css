@@ -1,0 +1,158 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+body {
+  overflow: hidden;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background: -webkit-linear-gradient(right, #1d1e1b, #23251f);
+  background: -moz-linear-gradient(right, #1d1e1b, #23251f);
+  background: -o-linear-gradient(right, #1d1e1b, #23251f);
+  background: linear-gradient(to left, #1d1e1b, #23251f);
+  background-image: radial-gradient(#43101a 30%,#27090f 70%);
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; 
+}
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.form ,#oublier , #resetPassword{
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 20px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 4px 4px 0 #ffffff33, 0 3px 5px 0 #ffffff3d;
+  border-radius: 10px;
+
+}
+.form .logo , #oublier .logo , #resetPassword .logo{
+  margin-bottom: 30px;
+}
+.form input , #oublier input , #resetPassword input{
+  font-family: "Roboto", sans-serif;
+  outline: none;
+  background: #e4e4e4;
+  height: 100%;
+  width: 100%;
+  border: solid 1px black;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  border-radius: 15px;
+  padding-left: 45px;
+  transition: all 0.3s ease;
+}
+.form button , #oublier button , #resetPassword button{
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #1d1e1b;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  border-radius: 15px;
+}
+.form a{
+  font-family: "Roboto", sans-serif;
+  color: #7c7c7c;
+  text-decoration: none;
+  text-decoration: underline;
+}
+.form a:hover{
+  cursor: pointer;
+}
+.form .user .icon{
+  position: absolute;
+  top: 50.5%;
+  left: 16%;
+  transform:translateY(-50%) ;
+
+}
+.form .psd .icon{
+  position: absolute;
+  top: 63%;
+  left: 16%;
+  transform:translateY(-50%) ;
+
+}
+.form p{
+  margin-top: 20px;
+}
+.form a:hover,a:hover,button:focus{
+  color: #000000;
+}
+.form input:hover,.form input:active,.form input:focus{
+  border: solid 1px #e2a408;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: #ca9206;
+}
+
+#oublier {
+  margin-top: 5%;
+}
+#oublier label{
+  font-weight: 700;
+}
+#oublier input , #oublier button{
+  padding: 6px ;
+  width: 60%;
+  text-align: center;
+  font-weight: 700;
+}
+#oublier input:last-child{
+  margin-bottom: 5%;
+}
+#oublier input:hover{
+  border: #ca9206;
+}
+#oublier button{
+  margin-top: 5%;
+}
+#oublier button:hover{
+  background-color: #ca9206;
+  border: black;
+  color: #000000;
+  font-weight: 800;
+}
+
+#resetPassword {
+  margin-top: 5%;
+}
+#resetPassword label{
+  font-weight: 700;
+}
+#resetPassword input , #resetPassword button{
+  padding: 6px ;
+  width: 60%;
+  text-align: center;
+  font-weight: 700;
+}
+#resetPassword input:last-child{
+  margin-bottom: 5%;
+}
+#resetPassword input:hover{
+  border: #ca9206;
+}
+#resetPassword button{
+  margin-top: 5%;
+}
+#resetPassword button:hover{
+  background-color: #ca9206;
+  border: black;
+  color: #000000;
+  font-weight: 800;
+}
+
